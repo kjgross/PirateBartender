@@ -46,8 +46,8 @@ def customers(cname):
     """Walks a customer through the drink ordering process"""
     customerdrink = createdrink()
     customerdrinkname = drinkname()
-    customerpair = customerdrink.append(customerdrinkname)
-    if customerdrink[0] != '':
+    customerpair = (customerdrink, customerdrinkname)
+    if customerpair[0] != []:
         print "Cool, I'll make you a drink with '{}'".format(customerdrink)
         print "I call this one the '{}'.".format(customerdrinkname)
         print "..."
